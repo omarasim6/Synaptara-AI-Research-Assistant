@@ -1,0 +1,68 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: synaptara_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: synaptara
+      POSTGRES_PASSWORD: synaptara_pass
+      POSTGRES_DB: synaptara
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U synaptara -d synaptara"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./synaptara-backend
+      dockerfile: Dockerfile
+    container_name: synaptara_api
+    restart: unless-stopped
+    env_file:
+      - ./synaptara-backend/.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://synaptara:synaptara_pass@db:5432/synaptara
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+    extra_hosts:
+      # Lets the container reach Ollama running on your host machine via
+      # OLLAMA_BASE_URL=http://host.docker.internal:11434 (see .env). Native
+      # on Docker Desktop for Windows/Mac; this line makes it also work on
+      # Linux Docker Engine.
+      - "host.docker.internal:host-gateway"
+
+  web:
+    build:
+      context: ./Synaptara
+      dockerfile: Dockerfile
+      args:
+        # Baked into the browser JS bundle at build time — must be the URL
+        # reachable from the user's browser (the published host port), not
+        # the internal Docker service name.
+        NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
+    container_name: synaptara_web
+    restart: unless-stopped
+    env_file:
+      - ./Synaptara/.env.local
+    environment:
+      # Used only for server-side calls made from inside this container
+      # (NextAuth callbacks, /api/register route) — reaches the backend
+      # over the Docker network by its Compose service name.
+      INTERNAL_API_URL: http://api:8000/api/v1
+      NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:
