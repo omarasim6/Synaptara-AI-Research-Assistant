@@ -66,9 +66,3 @@ Synaptara is a full-stack AI research assistant that aggregates papers and findi
 | **Ollama** (default) | Free, runs locally — no API key needed. Uses `llama3.2:1b` |
 | **OpenAI** | GPT with live web search grounding — requires API key |
 ---
-
-<div align="center">
-
-Built with ☕ and a lot of debugging.
-
-</div>
