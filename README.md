@@ -18,8 +18,6 @@
 
 Synaptara is a full-stack AI research assistant that aggregates papers and findings from sources like **arXiv**, **PubMed**, **OpenAI**, and **DeepMind**; then uses AI to summarise, organise, and cite them for you. Stop spending hours searching through papers. ***Get the signal, not the noise***.
 
----
-
 ## Features
 
 | Feature | Description |
@@ -35,8 +33,6 @@ Synaptara is a full-stack AI research assistant that aggregates papers and findi
 | **Google OAuth + Email Auth** | Sign in with Google or traditional email/password |
 | **Dark Mode** | Full light/dark theme support |
 | **Fully Responsive** | Works on mobile, tablet, and desktop |
-
----
 
 ## Tech Stack
 
