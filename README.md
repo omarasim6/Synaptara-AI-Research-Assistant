@@ -8,15 +8,7 @@
 
 **Search, summarise, and track the latest AI research — all in one place.**
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://postgresql.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docker.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-
-[Live Demo](https://synaptara.vercel.app) · [API Docs](https://synaptara-backend.up.railway.app/docs) · [Report a Bug](https://github.com/omarasim6/Synaptara-AI-Research-Assistant/issues) · [Request a Feature](https://github.com/omarasim6/Synaptara-AI-Research-Assistant/issues)
+[Live Demo]() · [Report a Bug](https://github.com/omarasim6/Synaptara-AI-Research-Assistant/issues)
 
 </div>
 
@@ -24,7 +16,7 @@
 
 ## What is Synaptara?
 
-Synaptara is a full-stack AI research assistant that aggregates papers and findings from sources like **arXiv**, **PubMed**, **OpenAI**, and **DeepMind** — then uses AI to summarise, organise, and cite them for you. Stop spending hours trawling through papers. Get the signal, not the noise.
+Synaptara is a full-stack AI research assistant that aggregates papers and findings from sources like **arXiv**, **PubMed**, **OpenAI**, and **DeepMind**; then uses AI to summarise, organise, and cite them for you. Stop spending hours searching through papers. ***Get the signal, not the noise***.
 
 ---
 
