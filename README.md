@@ -6,7 +6,7 @@
 
 ### AI-Powered Research Assistant
 
-**Search, summarise, and track the latest AI research — all in one place.**
+**Search, summarise, and track the latest AI research all in one place.**
 
 [Live Demo]() · [Report a Bug](https://github.com/omarasim6/Synaptara-AI-Research-Assistant/issues)
 
@@ -25,11 +25,11 @@ Synaptara is a full-stack AI research assistant that aggregates papers and findi
 | Feature | Description |
 |---|---|
 | **AI-Powered Search** | Search across major AI and academic sources with AI-generated summaries and citations |
-| **Sage Assistant** | Built-in AI chat widget — ask anything about your research or the platform |
+| **Sage Assistant** | Built-in AI chat widget ask anything about your research or the platform |
 | **Research Dashboard** | Unified view of your searches, saved papers, reports, and alerts |
 | **Paper Library** | Save and organise papers across topics for later reference |
 | **Report Generation** | Auto-generate literature-review style reports from saved papers |
-| **Research Alerts** | Set standing alerts on topics — get notified when new papers match |
+| **Research Alerts** | Set standing alerts on topics get notified when new papers match |
 | **Weekly Digest** | Scheduled email digest of your alert activity (SMTP configurable) |
 | **Subscription Billing** | Free, Pro, Scholar, and Institutional plans via Stripe |
 | **Google OAuth + Email Auth** | Sign in with Google or traditional email/password |
@@ -63,6 +63,6 @@ Synaptara is a full-stack AI research assistant that aggregates papers and findi
 ### AI Providers
 | Provider | Description |
 |---|---|
-| **Ollama** (default) | Free, runs locally — no API key needed. Uses `llama3.2:1b` |
-| **OpenAI** | GPT with live web search grounding — requires API key |
+| **Ollama** (default) | Free, runs locally no API key needed. Uses `llama3.2:1b` |
+| **OpenAI** | GPT with live web search grounding requires API key |
 ---
